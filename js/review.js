@@ -2,29 +2,26 @@
 const d = new Date();
 // Store the value of getHours in variable
 let hour = d.getHours();
-// let hour =
+hour = 20;
 
-if(hour <= 12){
 if (hour < 12) {
 // Morning
-document.getElementById("greetings").innerText = "Good Morning";} 
-document.getElementById("image").src = "img/morning.jpg"
+// document.getElementById("greetings").innerText = "Good Morning";} 
+// document.getElementById("image").src = "img/Morning.jpg"
+document.querySelector(".night").classList.add("d-none");
+  document.querySelector(".afternoon").classList.add("d-none");
 }
- if(hour < 17){
+else if(hour < 17){
 // Afternoon
-document.getElementById("greeting").innerText = "Good Afternoon";
-document.getElementById("image").src = "img/highnoon.jpg"
+// document.getElementById("greeting").innerText = "Good Afternoon";
+// document.getElementById("image").src = "img/Afternoon.jpg"
+document.querySelector(".morning").classList.add("d-none");
+  document.querySelector(".night").classList.add("d-none");
  }
 else {
 // Night
-document.getElementById("greeting").innerText = "Good Night";
-document.getElementById("image").src = "img/Night.jpg"
+// document.getElementById("greeting").innerText = "Good Night";
+// document.getElementById("image").src = "img/Night.jpg"
+document.querySelector(".morning").classList.add("d-none");
+  document.querySelector(".afternoon").classList.add("d-none");
 }
-
-
-
-
-
-
-//let greetingElement = document.getElementById("greeting");
-//console.log(greetingElement);
